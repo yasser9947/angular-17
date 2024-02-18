@@ -14,7 +14,6 @@ import {StandaloneComponent} from "./standalone/standalone.component";
   declarations: [
     AppComponent,
     StandaloneComponent
-
   ],
   imports: [
     BrowserModule,
