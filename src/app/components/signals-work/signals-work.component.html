@@ -1,0 +1,20 @@
+<h1 class="text-center p-1"> Render when  change the background Color </h1>
+<div class="box mt-1 m-auto" style="background: {{getRandomColor()}}">
+
+  <h1>Grandpa</h1>
+  <div class="btn btn-outline-dark" (click)="incrementStateNumber()"> increment state</div>
+
+  <div class="btn btn-outline-dark mt-1" (click)="signalService.incrementStateServiceNumber()"> increment service state</div>
+
+  <div class="btn btn-outline-dark mt-1" (click)="signalService.incrementSignalNumber()"> increment signal</div>
+</div>
+
+<div class="row">
+  <div class="col-6  d-flex justify-content-center">
+    <app-a-son [stateNumber]="stateNumber"></app-a-son>
+  </div>
+  <div class="col-6 d-flex justify-content-center">
+    <app-b-son></app-b-son>
+  </div>
+</div>
+

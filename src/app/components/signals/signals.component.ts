@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, inject} from '@angular/core';
+import {SignalService} from "../../services/signal.service";
 
 @Component({
   selector: 'app-signals',
@@ -8,5 +9,12 @@ import { Component } from '@angular/core';
   styleUrl: './signals.component.css'
 })
 export class SignalsComponent {
+
+
+
+  constructor() {
+  }
+
+
 
 }
