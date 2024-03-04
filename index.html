@@ -14,12 +14,13 @@
 </head>
 <body>
 
-<form id="form">
+
 
     <div  style="color: #f5c518" class="container mt-5">
+        <form id="form">
         <div  class="row d-flex justify-content-center mt-5">
             <h1 class="text-center mt-5"> Add your movie</h1>
-            <div class="mb-3 col-4  ">
+            <div class="mb-3 col-4 col-sm-12  ">
                 <div id="aleart" class="alert alert-danger" style="display: none" role="alert">
                     error in some field
                 </div>
@@ -29,7 +30,7 @@
             </div>
         </div>
         <div class="row d-flex justify-content-center">
-            <div class="mb-3  col-4  ">
+            <div class="mb-3  col-4 col-sm-12  ">
                 <label class="form-label">category</label>
                 <select style="color: #f5c518" id ="category" class="form-select form-select-lg mb-3" aria-label="Large select example">
                     <option value="Action">Action</option>
@@ -47,22 +48,22 @@
             </div>
         </div>
         <div class="row d-flex justify-content-center">
-            <div class="mb-3  col-4  ">
+            <div class="mb-3  col-4 col-sm-12  ">
                 <label class="form-label">year</label>
                 <input id="year" required type="number" class="form-control" placeholder="">
             </div>
         </div>
         <div class="row d-flex justify-content-center">
-            <div class="mb-3  col-4  ">
+            <div class="mb-3  col-4 col-sm-12  ">
                 <label class="form-label">image</label>
                 <input id="image"  class="form-control" placeholder="">
                 <button style="color: #f5c518"  id="btn" class="btn  mt-4 btn-dark btn-outline-black"> submit</button>
             </div>
 
         </div>
-
+        </form>
     </div>
-</form>
+
 
 <div  style="display: none ; height: 100vh"  id="thanks"  class="thank vh-100 justify-content-center align-items-center">
     <div class="text-center mt-5">
