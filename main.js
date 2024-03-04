@@ -14,15 +14,19 @@ myHeaders.append("user-agent", "GuzzleHttp/7");
 
 
 
-btn.addEventListener("click" , ()=>{
+btn.addEventListener("click" , (e)=>{
+    e.preventDefault()
     console.log(movieName.value , category.value , year.value , image.value )
+    btn.setAttribute("disabled" ,"disabled")
     movieName.value
     if ( !movieName.value || !category.value || !year.value || !image.value){
         console.log("error")
         aleart.style.display = "block"
+        btn.removeAttribute("disabled" )
             setTimeout(()=> aleart.style.display = "none"  , 3000)
         return
     }
+    btn.innerText = "plz wait"
     var raw = JSON.stringify({
         "data": {
             "name": movieName.value ,
