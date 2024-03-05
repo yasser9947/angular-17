@@ -1,0 +1,32 @@
+<h1 class="text-center mt-5"> List Of Movies</h1>
+<div class="row  ">
+  <div class="form-group d-flex justify-content-center">
+    <div class="col-4">
+      <label for="">categories</label>
+      <select (change)="onChangeHandler($event)" class="form-control" name="" id="">
+        <option value="-1">all</option>
+        @for (category of categories();track category){
+          <option value="{{category}}">{{category}}</option>
+        } @empty {
+          <option value="null" > no category </option>
+        }
+      </select>
+    </div>
+  </div>
+</div>
+<hr>
+<div class="row">
+  @for (movie of filterMovies(); track movie.row_id) {
+
+    <div class="col-3 mt-3">
+      <div class="card text-left">
+        <img class="card-img-top" height="250" src="{{movie?.image}}" alt=" no image">
+        <div class="card-body">
+          <h4 class="card-title">{{movie?.name}}</h4>
+          <p class="card-text">{{movie?.year }} -  {{movie.category}} </p>
+        </div>
+      </div>
+    </div>
+  }
+</div>
+
